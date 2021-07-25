@@ -8,10 +8,7 @@ import androidx.lifecycle.LiveData
 import com.g.autocrypt.NaverMapActivity
 import com.g.autocrypt.database.CenterEntity
 import com.g.autocrypt.repository.Repository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 class MainViewModel(application: Application) : AndroidViewModel(application)  {
 
@@ -32,6 +29,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application)  {
         job.join()
         Toast.makeText(context,"저장이 완료되었습니다.",Toast.LENGTH_SHORT).show()
         val intent = Intent(context,NaverMapActivity::class.java)
+
+        delay(2000L)
         context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 }
