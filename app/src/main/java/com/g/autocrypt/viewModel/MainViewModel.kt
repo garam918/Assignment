@@ -24,6 +24,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application)  {
         return this.centers
     }
 
+    // 코루틴을 사용하여 모든 데이터가 DB에 저장이 끝나면 네이버 지도 화면으로 넘어가게 구현 했습니다.
     fun getCenterInfo() = runBlocking {
         val job = CoroutineScope(Dispatchers.IO).launch {
             repository.getCenterInfo()
