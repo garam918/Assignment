@@ -82,13 +82,14 @@ class NaverMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     // 과제 요구사항에 데이터를 toast로 출력한다고 되어있어 Dialog나 InfoWindow를 활용하지 않고 Toast 메시지를 사용했습니다.
     private fun toastMessage(centerEntity: CenterEntity) {
-        Toast.makeText(this@NaverMapActivity,"id : ${centerEntity.id}\n" + "sido : ${centerEntity.sido}\n"
+        Toast.makeText(this@NaverMapActivity,
+            "centerName : ${centerEntity.centerName}\n" + "id : ${centerEntity.id}\n" + "sido : ${centerEntity.sido}\n"
                 + "sigungu : ${centerEntity.sigungu}\n" + "facilityName : ${centerEntity.facilityName}\n"
                 + "zipCode : ${centerEntity.zipCode}\n" + "address : ${centerEntity.address}\n" +
                 "LatLag : ${centerEntity.lat},${centerEntity.lng}\n" + "createAt : ${centerEntity.createAt}\n"
                 + "updateAt : ${centerEntity.updateAt}\n" + "centerType : ${centerEntity.centerType}\n"
                 + "org : ${centerEntity.org}\n" + "phoneNumber : ${centerEntity.phoneNumber}\n"
-            ,Toast.LENGTH_SHORT).show()
+            ,Toast.LENGTH_LONG).show()
 
     }
 
