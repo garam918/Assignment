@@ -25,7 +25,3 @@
 - Coroutine 1.4.2
 - ViewModel
 - Naver Map API
-
-## 시연 영상
-
-https://youtu.be/oFAXBGyi_qc
